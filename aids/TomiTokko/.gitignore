@@ -1,6 +1,7 @@
 # Ignore SSL certificate and private key files
 *.pem
 *.key
+*.pub
  
 # Ignore all log files
 *.log
@@ -9,3 +10,6 @@
 
 .vscode/
 *.swp
+
+#
+*.comments
