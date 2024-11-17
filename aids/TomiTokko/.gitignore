@@ -1,0 +1,11 @@
+# Ignore SSL certificate and private key files
+*.pem
+*.key
+ 
+# Ignore all log files
+*.log
+
+# Ignore temporary files 
+
+.vscode/
+*.swp
