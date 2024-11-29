@@ -6,7 +6,10 @@
 //     return (number == 0) ? 1 : number * factorial(number - 1);
 // }
 
-function fibo(n) {
+
+
+
+function fibo1(n) {
     let a = 0; 
     let b = 1; 
     let c 
