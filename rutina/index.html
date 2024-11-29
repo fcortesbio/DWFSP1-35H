@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Despertando</title>
+</head>
+<body>
+    <div class="button">
+        <button onclick="history.back()">Atrás</button>
+        <button><a href="../" class="back-link">inicio</a></button>
+    </div>
+    
+    <header class="container" id="header">
+        <h1 class="main-title">Despertando</h1>
+        <p class="intro-text">
+            ¿Cómo comienzas tus mañanas? Las decisiones que tomas al despertar más sobre ti de lo que crees.
+            ¡Descubre más sobre tus hábitos con este formulario interactivo!
+        </p>
+    </header>
+
+    <form action="javascript:void(0)" method="post" id="morning-routine-form" class="container"> 
+        <h2 class="form-title">¿Te atreves a tomar este desafío?</h2>
+        <ul class="form-questions">
+
+            <fieldset class="form-section" id="introduce-yourself">
+                <legend>Primero, una presentación breve</legend>
+                <li>
+                    <label for="name">¿Cómo te llamas?</label>
+                    <input type="text" name="name" id="name" required aria-label="Nombre">
+                </li>
+                <li>
+                    <label for="birthday">¿Cuál es tu fecha de nacimiento?</label>
+                    <input type="date" name="birthday" id="birthday" required aria-label="Fecha de nacimiento">
+                </li>
+                <li>
+                    <label for="email">¿Cuál es tu correo electrónico?</label>
+                    <span class="comment">(prometo que no es una suscripción)</span>
+                    <input type="email" name="email" id="email" required aria-label="Correo electrónico">
+                </li>
+            </fieldset>
+
+            <fieldset class="form-section" id="daily-routine">
+                <legend>Ahora, examinemos tu rutina diaria</legend>
+                <li>
+                    <label for="wakeup-time">¿A qué hora despertaste?</label>
+                    <input type="time" name="wakeup-time" id="wakeup-time" required aria-label="Hora de despertar">
+                </li>
+                <li>
+                    <label>¿Necesitaste alarma?</label>
+                    <div>
+                        <input type="radio" name="alarm" id="alarm-yes" value="yes">
+                        <label for="alarm-yes">Sí</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="alarm" id="alarm-no" value="no">
+                        <label for="alarm-no">No</label>
+                    </div>
+                </li>
+                <li>
+                    <label for="who-alarm">Si tu alarma fuera una estrella de Hollywood, ¿cómo se llamaría?</label>
+                    <input type="text" name="who-alarm" id="who-alarm" aria-label="Nombre de la alarma">
+                </li>
+                <li>
+                    <label>¿Con qué pie te despertaste hoy?</label>
+                    <div>
+                        <input type="radio" name="foot" id="foot-right" value="right">
+                        <label for="foot-right">Derecho</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="foot" id="foot-left" value="left">
+                        <label for="foot-left">Izquierdo</label>
+                    </div>
+                </li>
+                <li>
+                    <label for="prep-time">¿Cuánto tiempo (minutos) tardaste en levantarte de la cama?</label>
+                    <input type="number" name="prep-time" id="prep-time" min="0" required aria-label="Tiempo para levantarse">
+                </li>
+                <li>
+                    <label>¿Te cepillaste los dientes?</label>
+                    <div>
+                        <input type="radio" name="brushed" id="brushed-yes" value="yes">
+                        <label for="brushed-yes">¡Obvio!</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="brushed" id="brushed-no" value="no">
+                        <label for="brushed-no">Oops, nope.</label>
+                    </div>
+                </li>
+                <li>
+                    <label for="phone-resistance">¿Cuánto tiempo (minutos) tardaste antes de revisar tu teléfono móvil?</label>
+                    <input type="number" name="phone-resistance" id="phone-resistance" min="0" aria-label="Tiempo antes de usar el teléfono">
+                </li>
+                <li>
+                    <label for="drink">¿Cuál fue tu primera bebida?</label>
+                    <select name="drink" id="drink" aria-label="Primera bebida">
+                        <option value="coffee">Café</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="tea">Té</option>
+                        <option value="matcha">Matcha</option>
+                        <option value="fruit-juice">Jugos de frutas</option>
+                        <option value="iced-coffee">Café helado</option>
+                        <option value="smoothies">Smoothies</option>
+                        <option value="milk-shakes">Batidos</option>
+                        <option value="yogurth">Yogurth</option>
+                        <option value="plant-based-milks">Leches vegetales</option>
+                        <option value="kefir">Yogurth griego / Kéfir</option>
+                        <option value="green-juices">Jugos verdes</option>                      
+                        <option value="other">Otro</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="music">¿Música para desayunar?</label>
+                    <div>
+                        <input type="radio" name="music" id="music-no" value="no">
+                        <label for="music-no">No</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="music" id="music-yes" value="yes">
+                        <label for="music-yes">Yes</label>
+                        <div class="nested-input">
+                            <label for="volume">¿A qué volumen?</label>
+                            <input type="range" id="volume" name="volume" min="0" max="5" step="1">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <label for="breakfast">Describe tu desayuno de hoy:</label>
+                    <textarea name="breakfast" id="breakfast" rows="3" aria-label="Desayuno ideal"></textarea>
+                </li>
+            </fieldset>
+
+            <li class="submit-section">
+                <input type="submit" value="Enviar">
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

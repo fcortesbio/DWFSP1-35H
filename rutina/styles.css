@@ -1,0 +1,138 @@
+/* 
+https://albertwalicki.com/blog/how-to-create-claymorphism-using-css
+https://www.w3schools.com/cssref/playdemo.php?filename=playcss_display&preval=flex
+https://www.shecodes.io/athena/73045-how-to-make-a-header-take-up-the-whole-top-of-the-screen-in-html#:~:text=To%20make%20the%20header%20take,up%20the%20entire%20viewport%20height.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: whitesmoke; 
+    line-height: 1.6;
+    color:#333;
+}
+
+button {
+    display: inline-block;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.button button, 
+.button a {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+h1, h2 {
+    font-weight: 800;
+    color: rgb(66, 39, 91);
+}
+
+header p {
+    text-align: left;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;    
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+}
+
+.container#header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-questions {
+    list-style: none;
+    padding: 0;
+}
+
+.form-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-section legend {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="time"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    display: inline-block; 
+    margin-right: 5px;
+}
+
+label {
+    display: inline-block; 
+    margin-bottom: 10px; 
+}
+
+input[type="range"] {
+    width: 100%;
+    max-width: 300px;
+}
+
+.submit-section {
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment {
+    font-size: 0.9em;
+    color: #777;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.nested-input {
+    margin-top: 5px;    
+    margin-left: 20px; 
+}

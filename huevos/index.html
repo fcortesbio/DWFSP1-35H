@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="2">
+    <link rel="stylesheet" href="style.css">
+    <title>Huevos fritos!</title>
+</head>
+<body>
+    <div id="home"><a href="../">Volver al inicio</a></div>
+    <header>
+        <h1>Hola Mundo!</h1>
+    </header>
+
+    <h2>¿Qué es este sitio?</h2>
+    <p>Aquí realizamos pruebas, ajustamos tornillos, y escribimos chistes mientras aprendemos HTML5.</p>
+    
+    <h3>Ahora un párrafo de prueba:</3>
+        <section>
+            {% lorem 50 w %} <span class="comment"> # Esto sólo se ejecutará en proyectos de Django :(</span>
+        </section>    
+
+    <h2>Receta para freír un huevo</h2>
+
+    <p>Veamos una receta sencilla para fritar un huevo, por supuesto, en pseudo-código de Python:</p>
+
+    
+    <p>
+        No te preocupes, si no te gusta Python, el blog de 
+        <a href="https://www.directoalpaladar.com/curso-de-cocina/como-hacer-huevos-fritos-perfectos-trucos-errores-a-evitar-para-lograr-puntilla-yema-libro" target="_blank"> Directo al paladar</a> tiene de tips para hacer los huevos fritos perfectos!      
+    </p>
+    
+    <img 
+    src="https://i.blogs.es/50bf3f/huevo-frito-puntilla/840_560.jpg" 
+    alt="Huevo frito en vista superior sobre un plato blanco."
+    width= 100%, height= auto>
+
+    <div class="code-snippet">
+            <p><span class="keyword">necesarios</span> = [<span class="keyword">huevos</span>, <span class="keyword">margarina</span>, <span class="keyword">sarten</span>, <span class="keyword">estufa</span>,  <span class="keyword">plato</span>]</p>
+            <p><span class="keyword">cocina</span> = <span class="function">revisar_implementos</span>() <span class="comment"># devuelve una lista con implementos presentes en la cocina</span></p>
+            <p><span class="keyword">hambre</span> = <span class="number">0</span></p>
+            
+            <ol>
+                <li><span class="keyword">while</span> <span class="number">hambre</span> > <span class="number">0</span> <span class="operator">&amp;</span> <span class="keyword">necesarios</span> <span class="keyword">in</span> <span class="keyword">cocina</span>:
+                    <ol class="indented">
+                        <li><span class="function">elegir_huevo</span>()</li>
+                        <li><span class="keyword">estado</span> = <span class="function">revisar_estado</span>(): <span class="comment"># devuelve True si el huevo está en buen estado, sino False</span>
+                            <ul class="indented">
+                                <li><span class="keyword">if</span> <span class="keyword">estado</span>:
+                                    <ul class="indented">
+                                        <li><span class="function">encender_estufa</span>()</li>
+                                        <li><span class="function">montar_sarten</span>()</li>
+                                        <li><span class="function">esparcir_margarina</span>()</li>
+                                        <li><span class="function">romper</span>(<span class="keyword">huevo</span>)</li>
+                                        <li><span class="function">verter</span>(<span class="keyword">huevo</span>, <span class="keyword">sarten</span>)</li>
+                                        <li><span class="keyword">while</span> <span class="keyword">True</span>:
+                                            <ul class="indented">
+                                                <li><span class="keyword">if</span> <span class="keyword">base</span> == <span class="string">blanca</span>:
+                            <ul class="indented">
+                                <li><span class="function">voltear</span>()</li>
+                                <li><span class="function">esperar</span>(<span class="number">10</span>)  <span class="comment"># Esperar 10 segundos</span></li>
+                                <li><span class="function">servir_en_plato</span>(<span class="keyword">huevo</span>)</li>
+                                <li><span class="function">adicionar_sal</span>()</li>
+                                <li><span class="function">apagar_estufa</span>()</li>
+                                <li><span class="function">limpiar_cocina</span>()</li>
+                                <li><span class="function">ingerir_huevo</span>()</li>
+                                <li><span class="number">hambre</span> -= <span class="number">1</span></li>
+                                <li><span class="keyword">break</span>  <span class="comment"># Salir del bucle while True</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="keyword">else</span>: <span class="comment"># base == transparente</span>
+                            <ul class="indented">
+                                <li><span class="function">esperar</span>(<span class="number">30</span>)  <span class="comment"># Esperar 30 segundos</span></li>
+                                <li><span class="function">revisar_estado</span>(<span class="keyword">huevo</span>)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+                </li>
+            </ol>
+        </li>
+    </ol>
+    </div>       
+
+</body>
+</html>
