@@ -19,6 +19,6 @@ calcButton.addEventListener("click", ()=>{
 });
 
 
-function checkPair(integer){
-    return integer % 2 === 0 ? "is pair" : "is not pair";
-}
+// function checkPair(integer){
+//     return integer % 2 === 0 ? "is pair" : "is not pair";
+// }
