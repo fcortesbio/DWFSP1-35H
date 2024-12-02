@@ -12,7 +12,6 @@ body {
 }
 
 header {
-    font-size: 24pt;
     font-weight: 900;
     width: 100%;
     background: blueviolet;
@@ -22,8 +21,17 @@ header {
 }
 
 header h1 {
+    font-size: 24pt;
     width: 80%;
     margin: 20px auto; 
+}
+
+header p {
+    font-size: 16pt;
+    font-weight: normal;
+    width: 80%;
+    margin: 20px auto;
+    color: whitesmoke;
 }
 
 nav ul {
@@ -35,4 +43,25 @@ nav ul {
 
 nav li {
     margin-bottom: 10px;
+}
+
+.button {
+    width: 500px;
+    margin: 0 25px 0;
+    justify-content: space-between;
+}
+
+.button button, .button a {
+    padding: 10px 20px;
+    background-color: whitesmoke;
+    color: blue;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button {
+    display: inline-block;
+    align-items: center;
+    margin-bottom: 20px;
 }
