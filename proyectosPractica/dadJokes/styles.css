@@ -25,14 +25,45 @@ button {
     position: fixed;
     margin: 50px 20px auto;
     margin: 0px 15px;
-    
 }
 
 .submit-button {
     color: blue;
     background: aliceblue; 
+}
 
 
+header {
+    width: 800px;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+}
+
+header > h1, header > p, header > img {
+    border: 1px black solid;
+    margin: 25px;
+}
+
+.header-text {
+    display: block;
+    margin: 25px;
+}
+
+h1 {
+    font-weight: 900;
+    width: 400px;
+    font-size: 28pt;
+}
+
+header > p {
+    width: 400px;
+    display: block;
+}
+
+header > img {
+    width: 200px;
+    display: flex;
 }
 
 .box {
@@ -50,16 +81,6 @@ button {
         0 16px 32px rgba(0, 0, 0, 0.07), 
         0 32px 64px rgba(0, 0, 0, 0.07);
 }
-
-.box h1 {
-    /* text-align: left; */
-    font-weight: 900;
-    text-indent: 10%;
-}
-
-/* .box h3 {
-    border-top: solid rgba(200, 200, 200, 0.5);
-} */
 
 .comment {
     color: gray;

@@ -3,16 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM</title> 1 
+    <title>Números  pares</title>
+    <link rel="stylesheet" href="../projects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 </head>
 <body>
-    <h1>Is this number pair?</h1>
+    <button id="back-button" onclick="history.back()">back</button>
+    <header class="box">
+        <h1>Números pares</h1>
+        <p>Esta es una página web interactiva simple que demuestra la manipulación básica del Document Object Model (DOM) utilizando JavaScript.</p>
+    </header>
 
-    <input type="number" name="input" id="input">
-    <button type="button" id="calculateButton">Calcular</button> 
+    <main> 
+        <article>
+            <section class="box">
+                <h2>¿Qué es el Document Object Model (DOM)?</h2>
+                <p>
+                    El modelo de objetos de documento (DOM, por sus siglas en inglés) es una interfaz de programación para documentos web. Representa la estructura de una página web como un árbol jerárquico de objetos, lo que permite a los desarrolladores manipular el contenido, la estructura y el estilo de una página web de forma dinámica mediante lenguajes de programación como JavaScript.
+                </p>
+                <p>El DOM representa el documento como un árbol de nodos. Cada elemento, atributo y fragmento de texto en un documento HTML es un nodo en el árbol del DOM.</p>
 
-    <p id="text">Output here:</p> 
+                <h3>Conceptos Clave del DOM</h3>
+                <ol>
+                    <li><strong>Estructura de árbol:</strong>
+                        <ul>
+                            <li>
+                                El DOM representa el documento como un <strong>árbol de nodos</strong>. Cada elemento, atributo y parte de texto en un documento HTML es un nodo en el árbol DOM.
+                            </li>
+                            <li>
+                                Por ejemplo, una estructura HTML como la siguiente:
+                                <pre><code class="language-html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Example&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello World!&lt;/h1&gt;
+        &lt;p&gt;Welcome to the DOM.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                Se convierte en una estructura de árbol en el DOM donde:
+                                <ul>
+                                    <li class="text-with-code"><code>&lt;html&gt;</code> es el elemento raíz.</li>
+                                    <li class="text-with-code"><code>&lt;head&gt;</code> y <code>&lt;body&gt;</code> son elementos secundarios de <code>&lt;html&gt;</code>.</li> 
+                                    <li class="text-with-code"><code>&lt;title&gt;</code>, <code>&lt;h1&gt;</code> y <code>&lt;p&gt;</code> están anidados aún más adentro.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
 
-    <script src="main.js"></script>    
+                    <li><strong>Tipos de nodos:</strong>
+                        <ul>
+                            <li class="text-with-code"><strong>Nodos de elementos:</strong> representan elementos de HTML (por ejemplo, <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>).</li>
+                            <li><strong>Nodos de texto:</strong> Representan el contenido de texto dentro de un elemento.</li>
+                            <li class="text-with-code"><strong>Nodos de atributo:</strong> Representan atributos como <code>class</code>, <code>id</code>, etc.</li>
+                        </ul>
+                    </li>   
+                    <li><strong>API para Interacciones:</strong>
+                        <ul>
+                            <li>Los desarrolladores pueden usar JavaScript para acceder y modificar el DOM, lo que permite realizar actualizaciones dinámicas de una página web.</li>
+                            <li>Ejemplos de operaciones de JavaScript:
+                                <ul class="text-with-code">
+                                    <li>Seleccionar elementos: <code>document.getElementById("id")</code>, <code>document.querySelector(".class")</code>.</li>
+                                    <li>Cambiar contenido: <code>element.innerHTML = "Nuevo contenido"</code>.</li>
+                                    <li>Agregar estilos: <code>element.style.color = "red"</code>.</li>
+                                    <li>Escuchar eventos: <code>element.addEventListener("click", handler)</code>.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>Representación en vivo:</strong>
+                        <ul>
+                            <li>El DOM está activo, lo que significa que los cambios en el árbol DOM se reflejan en la página web inmediatamente.</li>
+                        </ul>    
+                    </li>
+                </ol>
+            </section>
+
+            <section class="box">      
+                <h3>¿Cómo funciona el sitio?</h3>
+                <ul>
+                    <li><strong>Entrada:</strong> La página permite a los usuarios ingresar un número en un campo de entrada.</li>
+                    <li><strong>Cálculo:</strong> Cuando se hace clic en el botón "Calcular", el código JavaScript verifica si el número ingresado es par o impar.</li>
+                    <li><strong>Salida:</strong> El resultado ("es par" o "no es par") se muestra dinámicamente en la página debajo del botón.</li>
+                </ul>
+
+                <h3>Veámos el sitio en acción:</h3>
+                <div class="demo-window">
+                    <p>Ingresa un número entero en el campo de abajo:</p>
+                    <input type="number" name="input" id="input">
+                    <button type="button" class="submit-button" id="calculateButton">Calcular</button> 
+                    <p id="text">Parece que esto está vacío</p> 
+                </div>
+
+                <p></p> 
+            </section>       
+        </article>
+    </main>
+
+    <script src="main.js"></script> 
 </body>
 </html>

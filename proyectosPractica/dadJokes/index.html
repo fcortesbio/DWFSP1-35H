@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="5">
+    <!-- <meta http-equiv="refresh" content="5"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dad Jokes</title>
-    <link rel="stylesheet" href="../projects.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="prism.css"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
@@ -15,23 +15,33 @@
 <body>
     <button onclick="history.back()">back</button>
     <header class="box">
-        <h1>Website title</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, nemo?</p>
+        <img src="https://freesvg.org/img/Troll-Face.png" alt="troll face vector" srcset="">
+        <div class="header-text">
+            <h1>Chistes malos del profe Javier</h1>
+            <p>Demostración de aplicaciones asincrónicas</p>
+        </div>
     </header>
     <main> 
         <article>
             <!-- Template section: -->
             <section class="box">
                 <h2>Chistes malos del profe Javier</h2>
-            
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis molestiae sit doloremque a laudantium repellendus corporis repellat, deleniti architecto unde sint ex, odit nulla! Quo, ipsum. Eveniet minima consectetur veritatis.</p>
-            
-                <p>Inventore omnis ipsam harum quos pariatur alias incidunt sapiente in non atque doloremque ipsa officia, deserunt vel ullam nostrum, blanditiis tenetur, corrupti necessitatibus? Laudantium doloribus, rem iste soluta consequatur aut.</p>
-             
-                
-                <script src="#">
-                    // space for script
-                </script>
+
+                <div class="demo-window">
+
+                    <div class="demo-display">
+                        <img id="icon" src="" alt="random"/> 
+                        <p id="username"> </p>
+                        <p id="jokeText">Aquí va la broma</p>
+                    </div>
+                    
+                    <button type="button" id="jokeButton">Otro chiste</button>
+                    
+                    <script src="main.js"></script>
+                </div>
+
+
+
                 
             </section>
             
