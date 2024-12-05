@@ -1,31 +1,29 @@
-// reference DOM elements
-let jokeButton = document.getElementById("jokeButton");
-let jokeText = document.getElementById("jokeText");
+// Reference DOM elements
+const jokeButton = document.getElementById("jokeButton");
+const jokeText = document.getElementById("jokeText");
 
-jokeButton.addEventListener("click", getJoke)
+// Event listener
+jokeButton.addEventListener("click", fetchJoke);
 
-async function getJoke(){
-        const response = await fetch("https://icanhazdadjoke.com/",{
-            headers:{
-                "Accept" : "application/json"
-            }
+// Fetch joke and display it
+async function fetchJoke() {
+    jokeText.innerHTML = "Loading joke..."; // Loading indicator
 
-        })
-        console.log(response)
-        const data = await response.json()
-        console.log(data)
+    try {
+        const response = await fetch("https://icanhazdadjoke.com/", {
+            headers: {
+                Accept: "application/json",
+            },
+        });
 
-        jokeText.innerHTML = data.joke
+        if (!response.ok) {
+            throw new Error("Failed to fetch a joke.");
+        }
+
+        const data = await response.json();
+        jokeText.innerHTML = data.joke;
+    } catch (error) {
+        jokeText.innerHTML = "Oops! Something went wrong. Try again.";
+        console.error("Error fetching joke:", error);
+    }
 }
-
-// random user generator
-$.ajax({
-  url: 'https://randomuser.me/api/',
-  dataType: 'json',
-  success: function(data) {
-    console.log(data);
-  }
-});
-      
-
-

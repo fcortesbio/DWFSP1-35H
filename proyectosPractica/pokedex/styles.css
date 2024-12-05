@@ -1,0 +1,115 @@
+body {
+    background-color: #02aab0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#PokemonList {
+    height: 800px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+
+}
+
+img.sprite {
+    width: 150px;
+    height: 150px;
+    margin: none;
+    padding: 20px;
+    border: none;
+    border-radius: 100px;
+    background-color: whitesmoke;
+    box-shadow: 
+        0px 1px 5px 0px rgba(21, 21, 21, 0.5);
+}
+
+h2.pokemon-id-name {
+    color: black;
+    margin: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    margin: 10px;
+    border: solid 1px black;
+    background-color: skyblue;
+    width: 300px;
+    height: auto;
+}
+
+.type {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-wrap: nowrap;
+    width: 200px;
+    height: 40px;
+    color: white;
+    border-radius: 5px;
+    margin: 1px;
+    border: none;
+    padding: 5px;
+    align-items: center;   
+}
+
+.type > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    width: 90px;
+    height: 35px;
+    border-radius: 25px;
+    box-shadow: 
+        0px 1px 5px 0px rgba(21, 21, 21, 0.5);
+
+}
+
+.div.abilities-list {
+    
+    display: flex;
+    align-items: center;
+
+}
+
+
+/* types colors:  */
+.grass {background: #9BCC50; color: #212121;}
+
+.poison {background-color: #B97FC9;color: white;}
+
+.fire {background-color: #FD7D24;color: white;}
+
+.flying {background: #3DC7EF;color: #212121;}
+
+.water {background: #4692C4;}
+
+.bug {background-color: #729F3F;}
+
+.normal {background-color: A4ACAF;color: #212121;}
+
+.electric {background-color: #EED535;color: #212121;}
+
+.ground {background-color: #F7DE3F;color: #212121;}
+
+.fairy {background-color: #FDB9E9;color: #212121;}
+
+.psychic {background-color: #F366B9; color: white;}
+
+.dragon {background-color: #53A4CF; color: white}
+
+.rock {background-color: #A38C21; color: white;}
+
+.ice {background-color: #51C4E7; color: #212121;}
+
+.fighting {background-color: #D56723; color: white;}
+
+.ghost {background-color: #7B62A3; color: white;}
+
+.steel {background-color: #9EB7B8; color: #212121;}
+
+.dark {background-color: #707070; color: white;}
