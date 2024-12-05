@@ -1,135 +1,140 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
+/* General Styles */
 body {
-    background: greenyellow;
+    margin: 0;
+    padding: 0;
     font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to right, greenyellow, lightgreen);
 }
 
+/* Button Styles */
 button {
     font-size: 12pt;
     font-weight: 800;
     cursor: pointer;
-    display: inline-block;
     padding: 10px;
-    width: 100px;
-    border: 4px;
-    border-color: none;
+    width: 120px;
+    border: none;
     border-radius: 20px;
-    box-shadow: 1px 1px 1px 1px rgba(50,50,50, 0.2);
+    box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.2);
+    transition: all 0.2s ease-in-out;
 }
 
-#back-button {
-    align-items: flex-start;
-    background: whitesmoke;
-    color: brown;
-    position: fixed;
-    margin: 50px 20px auto;
-    margin: 0px 15px;
+button:hover {
+    background-color: lightgreen;
+    transform: scale(1.05);
 }
 
-.submit-button {
-    color: blue;
-    background: aliceblue; 
+button:focus {
+    outline: 2px solid lightblue;
 }
 
-
+/* Header Styles */
 header {
-    width: 800px;
-    justify-content: center;
-    align-items: flex-start;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-header > h1, header > p, header > img {
-    border: 1px black solid;
-    margin: 25px;
+header img {
+    width: 100px;
+    margin-right: 20px;
 }
 
 .header-text {
-    display: block;
-    margin: 25px;
+    max-width: 500px;
 }
 
-h1 {
-    font-weight: 900;
-    width: 400px;
+header h1 {
     font-size: 28pt;
+    font-weight: 900;
+    margin-bottom: 10px;
 }
 
-header > p {
-    width: 400px;
-    display: block;
-}
-
-header > img {
-    width: 200px;
-    display: flex;
-}
-
-.box {
-    background: white;
-    max-width: 800px;
-    margin: 25px  auto;
-    border: 20px none;
-    /* border-radius: 5px; */
-    padding: 35px;
-    box-shadow: 
-        0 1px 2px rgba(0, 0, 0, 0.07), 
-        0 2px 4px rgba(0, 0, 0, 0.07), 
-        0 4px 8px rgba(0, 0, 0, 0.07), 
-        0 8px 16px rgba(0, 0, 0, 0.07), 
-        0 16px 32px rgba(0, 0, 0, 0.07), 
-        0 32px 64px rgba(0, 0, 0, 0.07);
-}
-
-.comment {
+header p {
+    font-size: 14pt;
     color: gray;
 }
 
-q {
-    text-align: right;
-    text-indent: 3em hanging;
-
+/* Box Container */
+.box {
+    background: white;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Demo Section */
+.demo-window {
+    background-color: skyblue;
+    color: rgb(240, 248, 255);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.demo-display {
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.demo-display img {
+    width: 80%;
+    max-width: 200px;
+    margin: 10px auto;
+}
+
+.demo-display p {
+    margin: 10px 0;
+    font-size: 16pt;
+    color: black;
+}
+
+/* Inputs */
+.demo-window input {
+    max-width: 400px;
+    margin: 15px auto;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: azure;
+    color: black;
+    border: none;
+    border-radius: 10px;
+}
+
+/* List Styles */
+ol > li, ul > li {
+    margin-bottom: 10px;
+}
+
+/* Quote Styling */
+q {
+    text-align: right;
+    text-indent: 3em;
+    display: block;
+    margin: 20px;
+}
+
+/* Inline Code */
 .text-with-code code {
     background: rgba(20, 50, 20, 0.15);
     font-family: 'Courier New', Courier, monospace;
     border-radius: 5px;
     padding: 2px;
-}
-
-ol>li, ul>li {
-    line-break: auto;
-    margin-bottom: 10px;
-}
-
-.demo-window {
-    color: rgb(240, 248, 255);
-    display: block;
-    padding: 10px;
-    background-color: skyblue;
-    margin: 10px;
-    text-align: center;
-}
-
-.demo-display {
-    width: 400px;
-    color: black;
-    background: whitesmoke;
-}
-
-.demo-display img {
-    border: 200px;
-}
-
-.demo-window input {
-    max-width: 500px;
-    margin: 15px;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 15px;
-    background-color: azure;
-    color: black;
-    border: none;
-    border-radius: 10px;
 }
