@@ -14,14 +14,14 @@ body {
     color: #212121;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 /* Header styles */
 header {
     text-align: center;
     padding: 20px;
-    background: #026873;
+    background: #313131;
     color: white;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }

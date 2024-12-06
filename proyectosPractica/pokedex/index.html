@@ -9,9 +9,16 @@
 <body>
     <!-- Header -->
     <header>
-        <h1>Pokedex</h1>
-        <p>Catch them all!</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, expedita!</p>
+        <h1>Pokédex</h1>
+        <p>Gotta catch them all!</p>
+
+        <div class="search-bar">
+            <div class="search-container">
+                <input type="text" placeholder="Pokémon name or ID..." id="searchInput">
+                <button onclick="">Search</button>
+            </div>
+        </div>
+
     </header>
 
     <!-- Main Content -->
@@ -19,14 +26,13 @@
         <section id="PokemonList" aria-label="List of Pokémon">
             <!-- Pokémon cards will be dynamically inserted here -->
         </section>
+        <script src="main.js"></script>
     </main>
 
     <!-- Footer -->
     <footer>
         <p>© 2024 The Pokémon Company. All rights reserved.</p>
-
     </footer>
 
-    <script src="main.js"></script>
 </body>
 </html>
