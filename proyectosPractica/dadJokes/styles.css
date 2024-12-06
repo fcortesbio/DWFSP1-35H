@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
-/* General Styles */
+/* General styles */
 body {
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@ body {
     background: linear-gradient(to right, greenyellow, lightgreen);
 }
 
-/* Button Styles */
+/* Button styles */
 button {
     font-size: 12pt;
     font-weight: 800;
@@ -16,6 +16,7 @@ button {
     padding: 10px;
     width: 120px;
     border: none;
+    margin: 10px;
     border-radius: 20px;
     box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.2);
     transition: all 0.2s ease-in-out;
@@ -30,7 +31,7 @@ button:focus {
     outline: 2px solid lightblue;
 }
 
-/* Header Styles */
+/* Header styles */
 header {
     max-width: 90%;
     margin: 20px auto;
@@ -45,7 +46,7 @@ header {
 }
 
 header img {
-    width: 100px;
+    width: 200px;
     margin-right: 20px;
 }
 
