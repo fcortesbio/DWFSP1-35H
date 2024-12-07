@@ -3,14 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pure CSS Shape - Animated Clock </title>
+    <title>Pure CSS Shape - Animated Clock</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="clock">
-        <span>
-            <!--  -->
-        </span>
+        <div class="hour"></div>
+        <div class="minute"></div>
+        <div class="second"></div>
+        <div class="center-dot"></div> 
     </div>
+
+    <script>
+        // Calculate the initial time and set styles dynamically
+        console.log("Hello, World!");
+        function initializeClock() {
+            const now = new Date();
+            const hours = now.getHours() % 12;
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            console.log(hours)
+            console.log(minutes)
+            console.log(seconds)
+
+            const hoursDegrees = ((hours / 12) * 360) - 90;
+            const minutesDegrees = ((minutes / 60) * 360) - 90;
+            const secondsDegrees = ((seconds / 60) * 360) - 90;
+            console.log(hoursDegrees)
+            console.log(minutesDegrees)
+            console.log(secondsDegrees)
+
+            const secondsHand = document.querySelector('.second');
+            const minutesHand = document.querySelector('.minute');
+            const hoursHand = document.querySelector('.hour');
+            console.log(secondsHand)
+            console.log(minutesHand)
+            console.log(hoursHand)
+            
+            // Set the initial positions
+            secondsHand.style.transform = `rotate(${secondsDegrees}deg)`;
+            minutesHand.style.transform = `rotate(${minutesDegrees}deg)`;
+            hoursHand.style.transform = `rotate(${hoursDegrees}deg)`;
+
+            // Add animations
+            secondsHand.style.animation = `spin-seconds 60s linear infinite`;
+            minutesHand.style.animation = `spin-minutes 3600s linear infinite`;
+            hoursHand.style.animation = `spin-hours 43200s linear infinite`;
+        }
+
+        initializeClock();
+    </script>
 </body>
 </html>
