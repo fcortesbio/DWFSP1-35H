@@ -6,37 +6,39 @@ function numPadding(number) {
   return number > 999 ? number.toString : number.toString().padStart(3, "0")
 }
 
-// Bring 
 const pokemonListContainer = document.getElementById("PokemonList");
-const loadMoreButton = document.createElement("button"); // Create the button element
+const loadMoreButton = document.createElement("button");
+loadMoreButton.textContent = "Load More Pokémon";
+loadMoreButton.className = "load-button";
+document.body.appendChild(loadMoreButton);
 
-// Load more
-loadMoreButton.textContent = "Load More Pokémon"; // Attribute text
-document.body.appendChild(loadMoreButton); // Append button to HTML document
-
-// 
-// missing for class: 12/05/2024 
-// 
-
-// Bring search box from HTML 
 const searchInput = document.getElementById("searchInput")
 const searchButton = document.getElementById("searchButton")
 
+let query = "";
+let pokemonCard; 
+
+
+// Search button
 searchInput.addEventListener("input", (ev)=>{
   query = ev.target.value;
 })
 
+searchButton.addEventListener("click", ()=>searchPokemon)
+
 async function searchPokemon() {
   try{
-    const pokemon = await fetchPokemonData(query);
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${query.toLowerCase()}`);
+    if (!response.ok){
+      throw new Error("Pokémon was not found. Please try again.")
+    }
+    const pokemon = response.json;
+    // const pokemon = await fetchPokemonData(query);
   } catch(error){
-    alert("Pokemon not found, please try again.")
+    alert(error.map)
   }
 
 }
-
-searchButton.addEventListener("click", ()=>searchPokemon)
-
 
 // Fetch Pokemon data from PokeAPI
 async function fetchPokemonData(pokemonId) {
