@@ -8,12 +8,10 @@
 </head>
 <body>
     <header>
-        <h1>Cloned Pokédex</h1>
-    </header>
-    <nav class="navigation-bar">
-        <ul class="nav-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Pokédex</a></li>
+    <nav class="navbar">
+        <ul>
+            <li><a href="https://youtu.be/dQw4w9WgXcQ?si=NH1k1JM7IwtSsQEj">Home</a></li>
+            <li><a href="https://youtu.be/dQw4w9WgXcQ?si=NH1k1JM7IwtSsQEj">Pokédex</a></li>
             <li><a href="https://youtu.be/dQw4w9WgXcQ?si=NH1k1JM7IwtSsQEj">Applications</a></li>
             <li><a href="https://youtu.be/dQw4w9WgXcQ?si=NH1k1JM7IwtSsQEj">Pokémon Cards Game</a></li>
             <li><a href="https://youtu.be/dQw4w9WgXcQ?si=NH1k1JM7IwtSsQEj">Pokémon Events</a></li>
@@ -21,12 +19,24 @@
             <li><a href="https://youtu.be/dQw4w9WgXcQ?si=NH1k1JM7IwtSsQEj">Animated Series</a></li>
         </ul>
     </nav>
+        <h1>Cloned Pokédex</h1>
+        <p>Fetch them all! </p>
+        
+        <div class="search-area">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search by Pokémon name or ID">
+                <button id="searchButton" onclick="search()">Search</button>
+            </div>
+        </div>
+        
+    </header>
 
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Pokémon name or ID">
-        <button id="searchButton" onclick="search()">Search</button>
-    </div>
-    
+    <main>
+        <section class="pokemon-list" id="pokemonList">
+            <!-- Pokemon list will be rendered here -->
+        </section>
+        <script src="main.js"></script>
+    </main>
     <aside>
         <h2>What does this have to do with Pokémon?</h2>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis qui excepturi voluptatem nihil, incidunt cupiditate iure rem! Voluptates est sit harum porro temporibus culpa suscipit! Fugit doloribus nisi quibusdam iusto ullam accusamus amet ipsam dolor, tenetur dolores distinctio perferendis voluptates commodi error magnam!  
@@ -39,16 +49,7 @@
             <li><a href="https://youtu.be/dQw4w9WgXcQ?si=NH1k1JM7IwtSsQEj">Accusamus officiis itaque.</a></li>
             <li><a href="https://youtu.be/dQw4w9WgXcQ?si=NH1k1JM7IwtSsQEj">Impedit, accusamus quam.</a></li>
         </ul>
-    </aside>
-
-    <main>
-        <section class="pokemon-list" id="PokemonList">
-            <!-- Pokemon list will be rendered here -->
-        </section>
-        <script src="main.js"></script>
-
-    </main>
-    
+    </aside>    
     <footer>
         <form action="register" class="signup-container">
             <h3>Sign up for Cloned Pokémon emails</h3>

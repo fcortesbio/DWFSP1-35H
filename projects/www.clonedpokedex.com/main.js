@@ -6,7 +6,7 @@ function capitalize(word) {
     return number > 999 ? number.toString() : number.toString().padStart(3, "0");
   }
   
-  const pokemonListContainer = document.getElementById("PokemonList");
+  const pokemonListContainer = document.getElementById("pokemonList");
   const loadMoreButton = document.createElement("button");
   loadMoreButton.textContent = "Load More Pokémon";
   document.body.appendChild(loadMoreButton);
@@ -67,7 +67,7 @@ function capitalize(word) {
     }
   }
   
-  async function loadPokedex(limit = 5, offset = 0) {
+  async function loadPokedex(limit = 12, offset = 0) {
     try {
       const pokemonList = await fetchPokemonData(limit, offset);
       const pokemonDetailsPromises = pokemonList.map(pokemon => fetchPokemonDetails(pokemon.url));
@@ -91,6 +91,7 @@ function capitalize(word) {
     pokemonCard.classList.add("container");
   
     const abilities = pokemon.abilities.map(ability => capitalize(ability.ability.name)).join(", ");
+    
   
     pokemonCard.innerHTML = `
       <h2 class="pokemon-id-name">N.º ${numPadding(pokemon.id)} - ${capitalize(pokemon.name)}</h2>
