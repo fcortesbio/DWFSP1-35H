@@ -15,43 +15,45 @@
     </div>
 
     <script>
-        // Calculate the initial time and set styles dynamically
-        console.log("Hello, World!");
-        function initializeClock() {
-            const now = new Date();
-            const hours = now.getHours() % 12;
-            const minutes = now.getMinutes();
-            const seconds = now.getSeconds();
-            console.log(hours)
-            console.log(minutes)
-            console.log(seconds)
+function initializeClock() {
+    const now = new Date();
+    const seconds = now.getSeconds();
+    const minutes = now.getMinutes();
+    const hours = now.getHours() % 12;
 
-            const hoursDegrees = ((hours / 12) * 360) - 90;
-            const minutesDegrees = ((minutes / 60) * 360) - 90;
-            const secondsDegrees = ((seconds / 60) * 360) - 90;
-            console.log(hoursDegrees)
-            console.log(minutesDegrees)
-            console.log(secondsDegrees)
+    // Calculate degrees for each hand
+    const secondsDegrees = ((seconds / 60) * 360) - 90;
+    const minutesDegrees = ((minutes / 60) * 360) - 90;
+    const hoursDegrees = ((hours / 12) * 360) - 90;
 
-            const secondsHand = document.querySelector('.second');
-            const minutesHand = document.querySelector('.minute');
-            const hoursHand = document.querySelector('.hour');
-            console.log(secondsHand)
-            console.log(minutesHand)
-            console.log(hoursHand)
-            
-            // Set the initial positions
-            secondsHand.style.transform = `rotate(${secondsDegrees}deg)`;
-            minutesHand.style.transform = `rotate(${minutesDegrees}deg)`;
-            hoursHand.style.transform = `rotate(${hoursDegrees}deg)`;
+    // Calculate delays to sync animation with current time
+    const secondsDelay = -seconds; // Negative delay to offset seconds
+    const minutesDelay = -(minutes * 60 + seconds); // Total elapsed seconds in the hour
+    const hoursDelay = -(hours * 3600 + minutes * 60 + seconds); // Total elapsed seconds in the 12-hour cycle
 
-            // Add animations
-            secondsHand.style.animation = `spin-seconds 60s linear infinite`;
-            minutesHand.style.animation = `spin-minutes 3600s linear infinite`;
-            hoursHand.style.animation = `spin-hours 43200s linear infinite`;
-        }
+    // Select hands
+    const secondsHand = document.querySelector('.second');
+    const minutesHand = document.querySelector('.minute');
+    const hoursHand = document.querySelector('.hour');
 
-        initializeClock();
+    // Set initial positions
+    secondsHand.style.transform = `rotate(${secondsDegrees}deg)`;
+    minutesHand.style.transform = `rotate(${minutesDegrees}deg)`;
+    hoursHand.style.transform = `rotate(${hoursDegrees}deg)`;
+
+    // Apply animations with appropriate delays
+    secondsHand.style.animation = `spin-seconds 60s linear infinite`;
+    secondsHand.style.animationDelay = `${secondsDelay}s`;
+
+    minutesHand.style.animation = `spin-minutes 3600s linear infinite`;
+    minutesHand.style.animationDelay = `${minutesDelay}s`;
+
+    hoursHand.style.animation = `spin-hours 43200s linear infinite`;
+    hoursHand.style.animationDelay = `${hoursDelay}s`;
+}
+
+initializeClock()
+
     </script>
 </body>
 </html>
