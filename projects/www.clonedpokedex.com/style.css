@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); */
 
 *
 {
     margin: 0; padding: 0;
     box-sizing: border-box;
+    /* border: solid 1px black; */
 }
 
 body 
 {
-    border: solid 1px black;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom, white, );
+    background: linear-gradient(to bottom, white, lightsteelblue);
     color: #212121;
     line-height: 1.5;
 }
@@ -25,40 +25,60 @@ header
     /* padding: 30px; */
     background-color: #313131;
     color: white;
+    font-weight: 500;
     box-shadow: 
         0px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-.navbar ul
+.navbar 
 {
-    list-style-type: none;
-    background: rgb(95, 180, 200);
+    display: flex; /* set navbar as flex container */
+    align-items: center;
+    justify-content: center; /* center ul horizontal;y */
+    background: rgb(95, 180, 200); 
     padding: 0; margin: 0;
-    overflow: hidden;
-    box-shadow: 
-        0 1px 4px rgba(0, 0, 0, 0.4);
+    overflow: hidden; /* */
+    /* box-shadow: 0 0px 3px rgba(0, 0, 0, 0.4); */
 }
 
-.navbar a 
-{
-    color: white;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-    text-align: center;
-}
-
-.navbar a:hover
-{
-    background-color: steelblue;
+.navbar ul
+{ 
+    list-style-type: none;/*rm bullets*/
+    width: 75%;  
+    padding: 0; /*rm default padding from ul*/
+    display: flex; /*Ul is also a flex container*/
+    align-items: center; 
+    justify-content: space-around;
+    height: 80px;
 }
 
 .navbar li
 {
-    float: left;
-
+    height: 100%;
 }
+
+.navbar a 
+{   
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    display: flex;
+    color: white;
+    text-shadow: 0 0 5px #212121;
+    height: 100%; width: 120px; 
+    margin: 0; padding: 0px;
+    /* white-space: nowrap; */
+    text-decoration: none;
+    display: block;
+    transition: background 600ms ease;
+}
+
+.navbar a:hover
+{
+    /* transform: scale(110%); */
+    background-color: steelblue;
+}
+
 
 header h1
 {
@@ -96,8 +116,6 @@ header p
     cursor: pointer;
 }
 
-
-
 #pokemonList
 {
     /* font-family: 'Courier New', Courier, monospace; */
@@ -120,6 +138,7 @@ header p
     text-align: center;
     padding: 20px;
     background: linear-gradient(45deg, rgba(#FF998B,1) 0%, rgba(#FF6D88,1) 100%);
+    border: solid 10px;
     
 }
 
@@ -163,8 +182,8 @@ header p
     font-weight: 600;
     text-transform: capitalize;
     color: white;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0  6px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 4px #212121;
 }
 
 .abilities-list strong {
