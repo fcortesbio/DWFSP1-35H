@@ -4,13 +4,26 @@
 *
 {
     border: solid 1px black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-
 }
 
 body 
 {
     background: linear-gradient(to bottom, #667eea, #462765);
+    color: #212121;
+    line-height: 1.5;
+}
+
+header
+{
+    text-align: center;
+    padding: 20px;
+    background-color: #313131;
+    color: white;
+    
 }
 
 header h1
