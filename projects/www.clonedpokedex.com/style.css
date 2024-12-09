@@ -195,6 +195,34 @@ header p
     color: #262626;
 }
 
+#actions
+{   
+    display: flex;
+    justify-content: center;
+    /* background-color: white; */
+}
+
+.action-button
+{
+    background-color: white;
+    color:black;
+    width: 200px; height: 60px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    margin: 25px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+    transition: background 400ms ease,box-shadow 400ms ease;
+}
+
+.action-button:hover
+{   
+    background-color: lightgreen;
+    box-shadow: 0 0 8px black;
+}
+
 
 /* Type Colors */
 .grass { background: #9BCC50; }
