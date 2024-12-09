@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure CSS Shape - Animated Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="clock">
+        <div class="hour"></div>
+        <div class="minute"></div>
+        <div class="second"></div>
+        <div class="center-dot"></div> 
+    </div>
+
+    <script>
+function initializeClock() {
+    const now = new Date();
+    console.log(now);
+    const hours = now.getHours() % 12;
+    console.log("hours: " + hours);
+    const minutes = now.getMinutes();
+    console.log("minutes: " + minutes);
+    const seconds = now.getSeconds();
+    console.log("seconds: " + seconds);
+
+    // Calculate degrees for each hand
+    const hoursDegrees = ((hours / 12) * 360) - 90;
+    console.log("Degrees hours: "+ hoursDegrees);
+    const minutesDegrees = ((minutes / 60) * 360) - 90;
+    console.log("Degrees minutes : "+ minutesDegrees);
+    const secondsDegrees = ((seconds / 60) * 360) - 90;
+    console.log("Degrees seconds: "+ secondsDegrees);
+
+    // Delays to sync animation with current machine time
+    const hoursDelay = -(hours * 3600 + minutes * 60 + seconds); 
+    console.log("Delay hours: "+ hoursDelay);
+    const minutesDelay = -(minutes * 60 + seconds); 
+    
+    const secondsDelay = -seconds; // Negative delay to offset seconds
+    console.log("Degrees hours: "+ hoursDegrees);
+    
+
+    // Select hands
+    const secondsHand = document.querySelector('.second');
+    const minutesHand = document.querySelector('.minute');
+    const hoursHand = document.querySelector('.hour');
+
+    // Set starting point of animations
+    secondsHand.style.transform = `rotate(${secondsDegrees}deg)`;
+    minutesHand.style.transform = `rotate(${minutesDegrees}deg)`;
+    hoursHand.style.transform = `rotate(${hoursDegrees}deg)`;
+
+    // Apply delay to animations
+    secondsHand.style.animation = `spin-seconds 60s linear infinite`;
+    secondsHand.style.animationDelay = `${secondsDelay}s`;
+
+    minutesHand.style.animation = `spin-minutes 3600s linear infinite`;
+    minutesHand.style.animationDelay = `${minutesDelay}s`;
+
+    hoursHand.style.animation = `spin-hours 43200s linear infinite`;
+    hoursHand.style.animationDelay = `${hoursDelay}s`;
+}
+
+initializeClock()
+
+    </script>
+</body>
+</html>
