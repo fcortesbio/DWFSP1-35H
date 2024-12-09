@@ -13,23 +13,44 @@ body {
     width: 300px;
     height: 300px;
     border: 25px solid blueviolet;
-    border-radius: 50%; 
+    border-radius: 20%; 
     background: white;
     box-shadow: 
         -2px 2px 0 blueviolet,
         inset 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Clock Hands */
-.hour, .minute, .second {
+
+.hour {
     position: absolute;
     top: 50%;
     left: 50%;
     transform-origin: 0%;
-    transform: rotate(-90deg); /* Default transform, overridden by JS */
+    transform: rotate(-90deg); 
     background-color: #262626;
     border-radius: 10px;
 }
+
+.minute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0%;
+    transform: rotate(-90deg); 
+    background-color: #262626;
+    border-radius: 10px;
+}
+
+.second {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0%;
+    transform: rotate(-90deg); 
+    background-color: #262626;
+    border-radius: 10px;
+}
+
 
 .hour {
     width: 20%;
@@ -44,24 +65,24 @@ body {
 .second {
     width: 34%;
     height: 6px;
-    background-color: blue;
+    background-color: #262626;
 }
 
-/* Center Dot */
 .center-dot { 
     display: block;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     background: blueviolet;
     border-radius: 50%;
     z-index: 1; 
+    box-shadow: 
+        -2px 2px 0 blueviolet;
 }
 
-/* Animations */
 @keyframes spin-seconds {
     0% {
         transform: rotate(-90deg); 

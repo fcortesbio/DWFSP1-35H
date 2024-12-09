@@ -17,31 +17,42 @@
     <script>
 function initializeClock() {
     const now = new Date();
-    const seconds = now.getSeconds();
-    const minutes = now.getMinutes();
+    console.log(now);
     const hours = now.getHours() % 12;
+    console.log("hours: " + hours);
+    const minutes = now.getMinutes();
+    console.log("minutes: " + minutes);
+    const seconds = now.getSeconds();
+    console.log("seconds: " + seconds);
 
     // Calculate degrees for each hand
-    const secondsDegrees = ((seconds / 60) * 360) - 90;
-    const minutesDegrees = ((minutes / 60) * 360) - 90;
     const hoursDegrees = ((hours / 12) * 360) - 90;
+    console.log("Degrees hours: "+ hoursDegrees);
+    const minutesDegrees = ((minutes / 60) * 360) - 90;
+    console.log("Degrees minutes : "+ minutesDegrees);
+    const secondsDegrees = ((seconds / 60) * 360) - 90;
+    console.log("Degrees seconds: "+ secondsDegrees);
 
-    // Calculate delays to sync animation with current time
+    // Delays to sync animation with current machine time
+    const hoursDelay = -(hours * 3600 + minutes * 60 + seconds); 
+    console.log("Delay hours: "+ hoursDelay);
+    const minutesDelay = -(minutes * 60 + seconds); 
+    
     const secondsDelay = -seconds; // Negative delay to offset seconds
-    const minutesDelay = -(minutes * 60 + seconds); // Total elapsed seconds in the hour
-    const hoursDelay = -(hours * 3600 + minutes * 60 + seconds); // Total elapsed seconds in the 12-hour cycle
+    console.log("Degrees hours: "+ hoursDegrees);
+    
 
     // Select hands
     const secondsHand = document.querySelector('.second');
     const minutesHand = document.querySelector('.minute');
     const hoursHand = document.querySelector('.hour');
 
-    // Set initial positions
+    // Set starting point of animations
     secondsHand.style.transform = `rotate(${secondsDegrees}deg)`;
     minutesHand.style.transform = `rotate(${minutesDegrees}deg)`;
     hoursHand.style.transform = `rotate(${hoursDegrees}deg)`;
 
-    // Apply animations with appropriate delays
+    // Apply delay to animations
     secondsHand.style.animation = `spin-seconds 60s linear infinite`;
     secondsHand.style.animationDelay = `${secondsDelay}s`;
 
